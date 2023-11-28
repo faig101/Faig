@@ -26,25 +26,25 @@ void Fraction::show()  {
     cout << numerator << "/" << denominator;
 }
 
-Fraction Fraction::add(const Fraction& sec) const {
+Fraction Fraction::add(const Fraction& sec) {
     int resultNumerator = numerator * sec.denominator + sec.numerator * denominator;
     int resultDenominator = denominator * sec.denominator;
     return Fraction(resultNumerator, resultDenominator);
 }
 
-Fraction Fraction::subtract(const Fraction& sec) const {
+Fraction Fraction::subtract(const Fraction& sec)  {
     int resultNumerator = numerator * sec.denominator - sec.numerator * denominator;
     int resultDenominator = denominator * sec.denominator;
     return Fraction(resultNumerator, resultDenominator);
 }
 
-Fraction Fraction::multiply(const Fraction& sec) const {
+Fraction Fraction::multiply(const Fraction& sec)  {
     int resultNumerator = numerator * sec.numerator;
     int resultDenominator = denominator * sec.denominator;
     return Fraction(resultNumerator, resultDenominator);
 }
 
-Fraction Fraction::divide(const Fraction& sec) const {
+Fraction Fraction::divide(const Fraction& sec)  {
     if (sec.numerator == 0) {
         cout << "Деление на ноль." << endl;}
     int resultNumerator = numerator * sec.denominator;
@@ -56,7 +56,7 @@ void Fraction::simplify() {
     numerator /= gcd;
     denominator /= gcd;
 }
-int Fraction::greatestCommonDivisor(int first, int sec) const {
+int Fraction::greatestCommonDivisor(int first, int sec)  {
     while (sec != 0) {
         int greatest = first;
         sec = first % sec;
