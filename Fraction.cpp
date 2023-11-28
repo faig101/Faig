@@ -22,7 +22,7 @@ void Fraction::input() {
     simplify();
 }
 
-void Fraction::show() const {
+void Fraction::show()  {
     cout << numerator << "/" << denominator;
 }
 
