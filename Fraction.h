@@ -9,15 +9,15 @@ public:
     Fraction(int num, int denom);
 
     void input();
-    void show()const;
-    Fraction add(const Fraction& sec)const;
-    Fraction subtract(const Fraction& other)const;
-    Fraction multiply(const Fraction& other)const;
-    Fraction divide(const Fraction& other)const;
+    void show();
+    Fraction add(const Fraction& sec);
+    Fraction subtract(const Fraction& other);
+    Fraction multiply(const Fraction& other);
+    Fraction divide(const Fraction& other);
 
 private:
     void simplify();
-    int greatestCommonDivisor(int a, int b)const;
+    int greatestCommonDivisor(int a, int b);
 };
 
 #endif
